@@ -37,7 +37,7 @@ int main() {
 	size_t file_size = infile.tellg();
 	infile.seekg(0, std::ios::beg);
 
-	vector<char> buffer(file_size);
+	vector<unsigned char> buffer(file_size);
 	infile.read(buffer.data(), file_size);
 	if (!infile) {
 		std::cerr << "Error reading file: " << File_Path << std::endl;
